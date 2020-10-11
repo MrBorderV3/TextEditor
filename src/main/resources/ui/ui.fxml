@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.border.texteditor.ui.controller.EditorController">
+   <children>
+      <TextArea fx:id="textArea" layoutY="27.0" onKeyPressed="#ctrlcheck" onKeyTyped="#update" prefHeight="780.0" prefWidth="1280.0" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0" />
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1280.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#open" text="Open...          Ctrl+O" />
+                  <MenuItem mnemonicParsing="false" onAction="#save" text="Save              Ctrl+S" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Exit" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#undo" text="Undo              Ctrl+Z" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#cut" text="Cut                 Ctrl+X" />
+                  <MenuItem mnemonicParsing="false" onAction="#copy" text="Copy              Ctrl+C" />
+                  <MenuItem mnemonicParsing="false" onAction="#paste" text="Paste              Ctrl+V" />
+                  <MenuItem mnemonicParsing="false" onAction="#delete" text="Delete             Del" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
